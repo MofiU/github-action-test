@@ -1,10 +1,10 @@
-FROM  rails
+FROM  ruby:3.0.1
 
 WORKDIR /app
 
 ADD . .
 
 RUN gem sources --add https://gems.ruby-china.com/ --remove https://rubygems.org/
-RUN gem install bundler && bundle install
+RUN bundle install
 
-ENTRYPOINT [ "rails", "s" ]
+ENTRYPOINT [ "bundle",  "exec", rails", "s" ]
