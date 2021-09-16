@@ -28,6 +28,7 @@ jobs:
         # uses: mr-smithers-excellent/docker-build-push@a7fe6652db5c7274374844e81692992f5a2befb9
         uses: mr-smithers-excellent/docker-build-push@v5.6
         with:
+          image: github-action-test
           tags: master
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
